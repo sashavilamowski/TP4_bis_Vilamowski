@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>TP 4 Bis- Página de países</h1>
+<h2>Presiona la bandera del país al cual quieras ir: </h2>
+@foreach(Pais item in ViewBag.ListaPaises){
+    <a href='@Url.Action("DetallePais", new {Pais=item.Nombre})'>
+        <img src="/imagenes/@item.imgBandera" width="19.8%" height="auto">
+    </a>
+}
